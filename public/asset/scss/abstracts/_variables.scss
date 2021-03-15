@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('../fonts/circular/fonts.css');
+
+:root {
+    --f-default: 'Open Sans', sans-serif;
+    --f-title: "Circular", sans-serif;
+
+
+    --c-main: #131128;
+    --c-white: #fff;
+    --c-grey_l5: #f8f9fc;
+
+
+    --c-text-primary : #333;
+    --c-text-secondary: #777;
+    --c-text-third : #999;
+
+    --c-red: #F7314F;
+    --c-red_d1: #cf1833;
+    --c-red_l4: #FFE8EB;
+
+    --c-blue: #007cf0;
+    --c-blue_l4: #e0effc;
+
+    --c-orange: #FA8557;
+    --c-orange_l4: #FFF3EE;
+
+    --c-cyan: #1cbbcc;
+    --c-cyan_l4: #EFFEFC;
+
+    --c-purple: #4731ce;
+    --c-purple_12: #2a206a;
+    --c-purple_l4: #f1dfff;
+
+    --easing: cubic-bezier(.48,0,.12,1);
+
+    // Brakepoints
+    
+
+    
+}
+
+$breakpoint-xl: 1199.98px;
+$breakpoint-lg: 991.98px;
+$breakpoint-md: 767.98px;
+$breakpoint-sm: 575.98px;
+
