@@ -1,0 +1,345 @@
+:root {
+    --f-default: 'Roboto', sans-serif;
+    // --f-default: 'Univers LT Std', sans-serif;
+    --f-title: 'Whyte', serif;
+
+
+    --c-white: #fff;
+    --c-grey_15: #e1e1e1;
+
+
+    --c-main-text : #251606;
+    --c-text-primary : #333;
+    --c-text-secondary: #777;
+    --c-text-third : #999;
+
+    --c-cyan: #1cbbcc;
+    --c-cyan_14: #D1F3FB;
+
+    --c-purple: #4731ce;
+    --c-purple_12: #201f52;
+    --c-purple_14: #f1dfff;
+
+    --easing: cubic-bezier(.48,0,.12,1);
+
+    --gradient: linear-gradient( 135deg, rgb(230, 101, 3) 0%, rgb(255, 176, 92) 100%);
+    --box-shadow : 0 5px 15px rgba(39, 52, 100, 0.1);
+
+    --box-shadow_2 : 0 10px 25px rgba(39, 52, 100, 0.1);
+
+    // Brakepoints
+    
+
+    
+}
+
+.custom {
+    .md-theme-default :not(input):not(textarea)::selection {
+        background-color: var(--c-purple);
+    }
+
+    .text-data {
+        font-weight: 700;
+        letter-spacing: -1px;
+        font-size: 1.8rem;
+
+        &.purple {
+            color: var(--c-purple);
+        }
+    }
+
+    .bg-primary {
+        &.purple {
+            background-color: var(--c-purple) !important;
+        }
+    }
+
+    
+
+    .btn {
+        position: relative;
+        padding: 12px 20px;
+        letter-spacing: 0.03em;
+        line-height: 1;
+        text-transform: uppercase;
+        font-size: .78em;
+        font-weight: 700;
+        border-radius: 50px;
+        border: none;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s;
+        box-shadow: 0 6px 30px -10px rgba(119, 101, 95, 0.4);
+        overflow: hidden;
+
+        &.purple {
+            background-color: var(--c-purple);
+        }
+
+        &.white {
+            color: var(--c-purple);
+            background-color: var(--c-white);
+
+            .md-icon {
+                color: var(--c-purple);
+            }
+        }
+
+        .md-icon {
+            width: auto;
+            height: auto;
+            min-width: 0;
+            font-size: 16px !important;
+            margin-left: 5px;
+            font-weight: normal;
+        }
+    }
+    .md-app {
+        &.md-overlap {
+            .md-app-toolbar {
+                position: relative;
+                background-color: var(--c-purple_12);
+                height: auto !important;
+                padding: 3em 0 0;
+            }
+        }
+
+        .md-app-toolbar {
+            position: relative;
+
+            .md-toolbar-row {
+                .md-title {
+                    font-weight: 700;
+                    font-size: 2.5em;
+                    line-height: normal;
+                }
+    
+                h5 {
+                    font-weight: 700;
+                    font-size: .87em;
+                    color: #fff;
+                    margin-top: 15px;
+                    padding: 5px 10px;
+                    background-color: rgba(255,255,255,.3);
+                    border-radius: 5px;
+                }
+
+            }
+
+        }
+
+        
+        .md-app-scroller {
+            position: relative;
+            margin-top: 0 !important;
+            background-color: #eff1f5;
+
+            &:before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 140px;
+                background-color: var(--c-purple_12);
+                top: 0;
+                left: 0;
+            }
+            
+            .md-app-content {
+                margin: 0 !important;
+                background: transparent;
+
+                .card {
+                    background-color: white;
+                    border: none;
+                    box-shadow: var(--box-shadow);
+                    border-radius: 15px;
+                    padding: 0 15px;
+
+                    &.card-tabel {
+                        padding: 0;
+
+                        > * {
+                            padding: 0;
+                        }
+
+                        .title-heading {
+                            padding: 1.25rem calc(1.25rem + 15px) 0;
+                        }
+
+                        .table td, .table th {
+                            border-top: 1px solid #e0dce4;
+                        }
+
+                        .table-hover tbody tr:hover {
+                            background-color: var(--c-purple_14);
+                        }
+                    }
+                }
+
+                #card-persen {
+                    transition: .3s var(--easing);
+
+                    &:hover {
+                        background-color: white;
+                        box-shadow: var(--box-shadow_2);
+                    }
+
+                    .title-card-persen {
+                        font-weight: 700;
+                        color: var(--c-purple);
+                        margin-bottom: 10px;
+                    }
+
+                    .mount-card-persen {
+                        font-weight: 700;
+                        letter-spacing: -1px;
+                        font-size: 1.5rem;
+                    }
+
+                    .md-progress-bar {
+                        background-color: var(--c-cyan_14);
+                        height: 8px;
+                        border-radius: 4px;
+
+                        .md-progress-bar-fill {
+                            background-color: var(--c-cyan);
+                        }
+                    }
+                }
+
+                .box-filter {
+                    position: relative;
+                    padding: 25px 35px;
+                    margin: 30px 0 30px;
+                    border: 2px solid #dcdbe4;
+                    border-radius: 15px;
+                    // background-color: #e3e5ea;
+
+                    .item-filter {
+                        h6 {
+                            font-weight: 500;
+                            color: var(--c-purple);
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            font-size: 14px;
+                        }
+
+                        .custom-control {
+                            margin-left: 10px;
+                            margin-bottom: 10px;
+
+                            .custom-control-label {
+                                &::before {
+                                    top: 0;
+                                    background-color: transparent;
+                                    border-color: #d1cfdb;
+                                    border-width: 2px;
+                                }
+
+                                &::after {
+                                    top: 0;
+                                }
+                            }
+
+                            .custom-control-input:checked ~ .custom-control-label::before {
+                                background-color: var(--c-purple);
+                                border-color: var(--c-purple);
+                            }
+                        }
+
+                        .item-shipping-filter {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 15px;
+
+                            &.pending {
+                                .vue-js-switch {
+                                    .v-switch-core {
+                                        .v-switch-button {
+                                            background-color: #fcc938;
+                                        }
+                                    }
+
+                                    &.toggled {
+                                        .v-switch-core {
+                                            background-color: #fcc938 !important;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.on-going {
+                                .vue-js-switch {
+                                    .v-switch-core {
+                                        .v-switch-button {
+                                            background-color: #00b0ff;
+                                        }
+                                    }
+
+                                    &.toggled {
+                                        .v-switch-core {
+                                            background-color: #00b0ff !important;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.success {
+                                .vue-js-switch {
+                                    .v-switch-core {
+                                        .v-switch-button {
+                                            background-color: #00C853;
+                                        }
+                                    }
+
+                                    &.toggled {
+                                        .v-switch-core {
+                                            background-color: #00C853 !important;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .vue-js-switch {
+                                margin-bottom: 0;
+                                .v-switch-core {
+                                    background-color: #d5d3df !important;
+                                    .v-switch-button {
+                                        transition: all .3s !important;
+                                    }
+                                }
+
+                                &.toggled {
+                                    .v-switch-core {
+                                        .v-switch-button {
+                                            background-color: var(--c-white);
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            > span {
+                                margin-left: 10px;
+                            }
+
+                            
+                        }
+                    }
+
+                }
+
+                .vue-map-container {
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: var(--box-shadow);
+                }
+            }
+        }
+    }
+
+
+    
+   
+}

@@ -1,41 +1,40 @@
 <template>
-    <div class="page-container">
+    <div class="page-container custom">
    
     <md-app md-waterfall md-mode="overlap">
 
-      <md-app-toolbar class="md-primary md-large">
-        <div class="md-toolbar-row">
-        
-          <span class="md-title">Dashboard Monitoring System </span>
-        </div>
+    <md-app-toolbar class="md-primary md-large align-items-start">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="md-toolbar-row flex-column align-items-start">
+                        <span class="md-title ml-0 bold">Dashboard Monitoring System </span>
+                        <h5>Tanggal : {{ moment().format("Do MMMM YYYY") }} </h5>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-end">
+                        <button class="ml-auto btn btn-primary purple"  @click="resetdata()">
+                            Reset Data 
+                            <md-icon>refresh</md-icon>
+                        </button>
+
+                    </div>
+                </div>
+              </div>
+          </div>
       </md-app-toolbar>
-
-    
-
       <md-app-content >
-        <div class="container mt-5" v-if="elementVisible == false">
-            <div class="row mb-4">
-                <div class="col-md-10">
-                    <h5 class="ml-3">Tanggal : {{ moment().format("Do MMMM YYYY") }} </h5>
-                </div>
-                 
-                <div class="col-md-2">
-                    <button class="btn btn-primary"  @click="resetdata()">
-                        Reset Data 
-                        <md-icon class="text-white">refresh</md-icon>
-                    </button>
-                </div>
-            
-            </div>
+        <div class="container" >
             <div class="row">
                
-                <div class="col-sm-6 col-xl-3" v-if="jumlahPesk.length > 0"> 
+                <div class="col-sm-6 col-xl-4" v-if="jumlahPesk.length > 0"> 
 
-                    <div class="card mb-4" id="card-persen">
+                    <div class="card mb-1" id="card-persen">
                         <div class="card-body">
                             <div class="d-flex align-items-center">
                                 <div class="ml-3">
-                                    <div class="text-muted text-left">PESK</div>
+                                    <div class="title-card-persen">PESK</div>
                                     <div class="text-large">
                                     
                                     <h3>{{ sumpesk(jumlahPesk) }} / {{ wadahPesk }} KG</h3>   
@@ -67,16 +66,16 @@
                 </div>
 
 
-                <div class="col-sm-6 col-xl-3" > 
-                    <div class="card mb-4" id="card-persen">
+                <div class="col-sm-6 col-xl-4" > 
+                    <div class="card mb-1" id="card-persen">
                         <div class="card-body">
                             <div class="d-flex align-items-center">
-                                <div class="ml-3">
-                                    <div class="text-muted text-left">Thermometer</div>
+                                <div class="ml-0">
+                                    <div class="title-card-persen">Thermometer</div>
                                     <div class="text-large">
                                     
-                                    <h3 v-if="jumlahThermometer.length > 0">{{ sumalkes(jumlahThermometer) }} / {{ wadahThermometer }} KG</h3>   
-                                    <h3 v-else>0 / {{ wadahThermometer }} KG</h3>   
+                                    <h3 class="mount-card-persen" v-if="jumlahThermometer.length > 0">{{ sumalkes(jumlahThermometer) }} / {{ wadahThermometer }} KG</h3>   
+                                    <h3 class="mount-card-persen" v-else>0 / {{ wadahThermometer }} KG</h3>   
                                     
                                     </div>
                                 </div>
@@ -86,10 +85,10 @@
                             <md-progress-bar md-mode="determinate" v-if="jumlahThermometer.length > 0" :md-value="Number(( sumalkes(jumlahThermometer) / wadahThermometer ) * 100).toFixed(0)"></md-progress-bar>
                             <md-progress-bar md-mode="determinate" v-else :md-value="0"></md-progress-bar>
 
-                            <div class="row mt-2">
+                            <div class="row align-items-center mt-2">
                                 
                                 <div class="col-md-6">
-                                    Terkumpul
+                                    <span class="text-muted">Terkumpul</span>
                                 </div>
 
                                 <div class="col-md-6">
@@ -113,18 +112,18 @@
                 </div>
 
 
-                <div class="col-sm-6 col-xl-3" > 
+                <div class="col-sm-6 col-xl-4" > 
 
         
-                    <div class="card mb-4" id="card-persen">
+                    <div class="card mb-1" id="card-persen">
                         <div class="card-body">
                             <div class="d-flex align-items-center">
-                                <div class="ml-3">
-                                    <div class="text-muted text-left">Tensimeter</div>
+                                <div class="ml-0">
+                                    <div class="title-card-persen">Tensimeter</div>
                                     <div class="text-large">
                                     
-                                    <h3 v-if="jumlahTensimeter.length > 0">{{ sumalkes(jumlahTensimeter) }} / {{ wadahTensimeter }} KG</h3>   
-                                    <h3 v-else> 0 / {{ wadahTensimeter }} KG</h3>   
+                                    <h3 class="mount-card-persen" v-if="jumlahTensimeter.length > 0">{{ sumalkes(jumlahTensimeter) }} / {{ wadahTensimeter }} KG</h3>   
+                                    <h3 class="mount-card-persen" v-else> 0 / {{ wadahTensimeter }} KG</h3>   
                                     
                                     </div>
                                 </div>
@@ -134,10 +133,10 @@
                             <md-progress-bar v-if="jumlahTensimeter.length > 0" md-mode="determinate" :md-value="Number(( sumalkes(jumlahTensimeter) / wadahTensimeter ) * 100).toFixed(0)"></md-progress-bar>
                             <md-progress-bar v-else md-mode="determinate" :md-value="0"></md-progress-bar>
 
-                            <div class="row mt-2">
+                            <div class="row align-items-center mt-2">
                                 
                                 <div class="col-md-6">
-                                    Terkumpul
+                                    <span class="text-muted">Terkumpul</span>
                                 </div>
 
                                 <div class="col-md-6">
@@ -159,17 +158,17 @@
                 </div>
 
 
-                <div class="col-sm-6 col-xl-3" > 
+                <div class="col-sm-6 col-xl-4" > 
 
-                    <div class="card mb-4" id="card-persen">
+                    <div class="card mb-1" id="card-persen">
                         <div class="card-body">
                             <div class="d-flex align-items-center">
-                                <div class="ml-3">
-                                    <div class="text-muted text-left">Dental Amalgam</div>
+                                <div class="ml-0">
+                                    <div class="title-card-persen">Dental Amalgam</div>
                                     <div class="text-large">
                                     
-                                    <h3 v-if="jumlahAmalgam.length > 0">{{ sumalkes(jumlahAmalgam) }} / {{ wadahAmalgam }} KG</h3>   
-                                    <h3 v-else> 0 / {{ wadahAmalgam }} KG</h3>   
+                                    <h3 class="mount-card-persen" v-if="jumlahAmalgam.length > 0">{{ sumalkes(jumlahAmalgam) }} / {{ wadahAmalgam }} KG</h3>   
+                                    <h3 class="mount-card-persen" v-else> 0 / {{ wadahAmalgam }} KG</h3>   
                                     
                                     </div>
                                 </div>
@@ -179,10 +178,10 @@
                             <md-progress-bar v-if="jumlahAmalgam.length > 0" md-mode="determinate" :md-value="Number(( sumalkes(jumlahAmalgam) / wadahAmalgam ) * 100).toFixed(0)"></md-progress-bar>
                             <md-progress-bar v-else md-mode="determinate" :md-value="0"></md-progress-bar>
 
-                            <div class="row mt-2">
+                            <div class="row align-items-center mt-2">
                                 
                                 <div class="col-md-6">
-                                    Terkumpul
+                                    <span class="text-muted">Terkumpul</span>
                                 </div>
 
                                 <div class="col-md-6">
@@ -207,8 +206,63 @@
             
 
             </div>
+            
+            <!-- <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-end mb-4">
+                        <div class="btn btn-primary purple" v-on:click="isNinja = !isNinja">Filter</div>
+                    </div>
+                </div>
+            </div> -->
+           
+            <div class="box-filter">
+                <div class="title-heading">
+                    <h5>Filter Shipping</h5>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="item-filter">
+                            <h6>Sortir Merkuri</h6>
+                            <b-check v-model="sortir_merkuri" value="0" @change="sortirMerkuri()">Pesk</b-check>
+                            <b-check v-model="sortir_merkuri" value="1" @change="sortirMerkuri()">Thermometer</b-check>
+                            <b-check v-model="sortir_merkuri" value="2" @change="sortirMerkuri()">Tensimeter Meja</b-check>
+                            <b-check v-model="sortir_merkuri" value="3" @change="sortirMerkuri()">Tensimeter Berdiri</b-check>
+                            <b-check v-model="sortir_merkuri" value="4" @change="sortirMerkuri()">Dental Amalgam </b-check>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="item-filter">
+                            <h6>Sortir Gudang</h6>
+                            <b-check v-model="sortir_gudang" value="0" @change="sortirGudang()">Interim Kab / Kota</b-check>
+                            <b-check v-model="sortir_gudang" value="1" @change="sortirGudang()">Interim Provinsi</b-check>
+                            <b-check v-model="sortir_gudang" value="2" @change="sortirGudang()">Interim Final</b-check>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="item-filter">
+                            <h6>Sortir Status Shipping</h6>
+                            <div class="item-shipping-filter pending">
+                                <toggle-button :value="false"  color="#fcc938" :labels="true" @change="sortirStatus(2)"/>
+                                <span>Pending</span>
+                            </div>
+                            <div class="item-shipping-filter on-going">
+                                <toggle-button :value="false"  color="#00b0ff" :labels="true" @change="sortirStatus(0)"/>
+                                <span>On Going</span>
+                            </div>
+                            <div class="item-shipping-filter success">
+                                <toggle-button :value="false"  color="#00C853" :labels="true" @change="sortirStatus(1)"/>
+                                <span>Sukses</span>
+                            </div>
+                        </div>
+                        
+
+                        <small class="text-muted">*Sortir Status Shipping untuk mengetahui Kondisi terbaru penjemputan</small>
+                    </div>
+                </div>
+
+            </div>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <gmap-map :center="center" :zoom="7" ref="mmm" style="width: 100%; height:600px">
                         <div  v-for="(value, key) in allData" v-bind:key="key">
                             <gmap-marker 
@@ -220,195 +274,150 @@
                     </gmap-map>
                 </div>
 
-                <div class="col-md-4">
-                    <b-card header="Sortir Merkuri" class="mb-4">
-                        <b-check v-model="sortir_merkuri" value="0" @change="sortirMerkuri()">Pesk</b-check>
-                        <b-check v-model="sortir_merkuri" value="1" @change="sortirMerkuri()">Thermometer</b-check>
-                        <b-check v-model="sortir_merkuri" value="2" @change="sortirMerkuri()">Tensimeter Meja</b-check>
-                        <b-check v-model="sortir_merkuri" value="3" @change="sortirMerkuri()">Tensimeter Berdiri</b-check>
-                        <b-check v-model="sortir_merkuri" value="4" @change="sortirMerkuri()">Dental Amalgam </b-check>
-                        
-
-                        
-                    </b-card>
-
-
-                    <b-card header="Sortir Gudang" class="mb-4">
-                        <b-check v-model="sortir_gudang" value="0" @change="sortirGudang()">Interim Kab / Kota</b-check>
-                        <b-check v-model="sortir_gudang" value="1" @change="sortirGudang()">Interim Provinsi</b-check>
-                        <b-check v-model="sortir_gudang" value="2" @change="sortirGudang()">Interim Final</b-check>
-                    </b-card>
-
-                    <b-card header="Gudang / Storage" class="text-center mb-4">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <small class="text-left">Kabupaten / Kota</small>
-                                <h2>{{ storage_kabupaten }}</h2>
-                                
-                            </div>
-
-                            <div class="col-md-2">
-                                <hr style="border:none;border-right:1px solid;
-                                height:10vh;width:10px;margin:auto;">
-
-                            </div>
-                            
-                            <div class="col-md-5">
-                                <small class="text-left">Provinsi</small>
-                                <h2>{{ storage_provinsi }}</h2>
-
-                            </div>
-
-                        </div>
-                        
-                    </b-card>
-
-                    
-
-                </div>
-            </div>
-
-            <div class="row ">
-
                 <div class="col-md-6">
-                    <h5>Sortir Status Shipping</h5>
+                    <b-card class="mb-4">
+                        <div class="title-heading text-center mb-4">
+                            <h5>Gudang/Storage</h5>
+                        </div>
                         <div class="row">
-                            <div class="col-md-4">
-                                <b-card header="Pending" class="text-center mb-4">
-                                <toggle-button :value="false"  color="#FF9900" :labels="true" @change="sortirStatus(2)"/>
-                                </b-card>
-                            </div>
-
-                            <div class="col-md-4">
-                                <b-card header="On Going" class="text-center mb-4">
-                                <toggle-button :value="false"  color="#00CCFF" :labels="true" @change="sortirStatus(0)"/>
+                            <div class="col-md-6 text-center">
+                                <h2 class="text-data purple">{{ storage_kabupaten }}</h2>
+                                <span class="text-muted">Kabupaten / Kota</span>
                                 
-                                </b-card>
                             </div>
-
-                            <div class="col-md-4">
-                                <b-card header="Sukses" class="text-center mb-4">
-                                <toggle-button :value="false"  color="#009933" :labels="true" @change="sortirStatus(1)"/>
-                                
-                                </b-card>
+                            <div class="col-md-6 text-center">
+                                <h2 class="text-data purple">{{ storage_provinsi }}</h2>
+                                <span class="text-muted">Provinsi</span>
                             </div>
                         </div>
-
-                        <small>*Sortir Status Shipping untuk mengetahui Kondisi terbaru penjemputan</small>
-                        
-                    
-                </div>
-
-                <div class="col-md-6">
-                    <b-card header="Akumulasi Penjemputan" class="text-center mb-4">
-                        <h2>{{ Number(( total_shipping_sudah / total_shipping ) * 100).toFixed(1) }} % </h2>
-                        <small class="text-center">Data Statistik Tahun {{  moment().format('YYYY') }}</small>
                     </b-card>
                 </div>
-                    
-                
-
+                <div class="col-md-6">
+                    <b-card class="mb-4  text-center">
+                        <div class="title-heading mb-4">
+                            <h5>Gudang/Storage</h5>
+                        </div>
+                        <h2 class="text-data purple">{{ Number(( total_shipping_sudah / total_shipping ) * 100).toFixed(1) }} % </h2>
+                        <span class="text-muted">Data Statistik Tahun {{  moment().format('YYYY') }}</span>
+                    </b-card>
+                </div>
             </div>
 
             <div class="row">
-                <h2>Infografis Penjemputan</h2>
+                <div class="col-md-12 text-center">
+                    <h2>Infografis Penjemputan</h2>
+                </div>
             </div>
 
             <div class="row">
                 <div class="col-md-6">
-                    <h6>Pelaporan Borang Alkes</h6>
-                    
-                    <LineChart v-if="loaded" :datachart="alkesdata"/>
-
+                    <b-card class="mb-4">
+                        <div class="title-heading mb-4">
+                            <h5>Infografis Penjemputan</h5>
+                        </div>
+                        <LineChart v-if="loaded" :datachart="alkesdata"/>
+                    </b-card>
                 </div>
-
                 <div class="col-md-6">
-                    <h6>Pelaporan Borang Pesk</h6>
-                    
-                    <LineChart v-if="loaded" :datachart="peskdata"/>
-
+                    <b-card class="mb-4">
+                        <div class="title-heading mb-4">
+                            <h5>Pelaporan Borang Pesk</h5>
+                        </div>
+                        <LineChart v-if="loaded" :datachart="peskdata"/>
+                    </b-card>
                 </div>
+
             </div>    
 
-            <div class="row">
+            <div class="row justify-content-between align-items-center">
                 <div class="col-md-4">
-                    <h6>Persentase Pelaporan Merkuri</h6>
-
-                    <DoughnutChart v-if="loaded" :datachart="persentasepelaporandata" :options="doughnutOptions"/>
+                    <div class="mb-5">
+                        <div class="title-heading mb-4">
+                            <h5>Persentase Pelaporan Merkuri</h5>
+                        </div>
+                         <DoughnutChart v-if="loaded" :datachart="persentasepelaporandata" :options="doughnutOptions"/>
+                    </div>
                 </div>
 
-                <div class="col-md-8">
-                    <h6>Kuantitas Merkuri Terlapor</h6>
-
-                    <BarChart v-if="loaded" :datachart="kuantitasmerkuridata"/>
-
+                <div class="col-md-7">
+                    <b-card class="mb-4">
+                        <div class="title-heading mb-4">
+                            <h5>Kuantitas Merkuri Terlapor</h5>
+                        </div>
+                        <BarChart v-if="loaded" :datachart="kuantitasmerkuridata"/>
+                    </b-card>
                 </div>
 
             </div>
 
             <div class="row mt-5">
                 <div class="col-md-12">
-                    <div class="table-responsive">
-                        <table class="table table-striped ">
-                            <thead class="bg-primary text-white">
-                                <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nama Storage</th>
-                                <th scope="col">Tipe Storage</th>
-                                <th scope="col">Jumlah Agent</th>
-                                <th scope="col">Pesk Terkumpul</th>
-                                <th scope="col">Alkes Terkumpul</th>
-                                <th scope="col">Persentase</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(item,key) in storage" :key="key">
-                                    <th scope="row">{{ key + 1}}</th>
-                                    <td>{{ item.nama_storage }}</td>
-                                    <td>
-                                        <span v-if="item.sifat == 0">Kabupaten / Kota</span>
-                                        <span v-else-if="item.sifat == 1">Provinsi</span>
-                                        <span v-else-if="item.sifat == 2">Final</span>
-                                    </td>
-                                    <td>
-                                        <span v-if="item.user_storage.length > 0">
-                                            {{ item.user_storage.length }}
-                                        </span>
-                                        <span v-else>
-                                            Belum Ada Agent
-                                        </span>
-                                    </td>
-                                    <td>
-                                    
-                                        <span v-if="item.pesksumsudah != null">
-                                            {{ item.pesksumsudah }}
-                                        </span>
-
-                                        <span v-else>
-                                            Barang Kosong
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span v-if="item.alkessumsudah != null">
-                                            {{ item.alkessumsudah }}
-                                        </span>
-
-                                        <span v-else>
-                                            Barang Kosong
-                                        </span>
+                    <b-card class="card-tabel">
+                        <div class="title-heading mb-4">
+                            <h5>Kuantitas Merkuri Terlapor</h5>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover ">
+                                <thead class="bg-primary text-white purple">
+                                    <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nama Storage</th>
+                                    <th scope="col">Tipe Storage</th>
+                                    <th scope="col">Jumlah Agent</th>
+                                    <th scope="col">Pesk Terkumpul</th>
+                                    <th scope="col">Alkes Terkumpul</th>
+                                    <th scope="col">Persentase</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(item,key) in storage" :key="key">
+                                        <th scope="row">{{ key + 1}}</th>
+                                        <td>{{ item.nama_storage }}</td>
+                                        <td>
+                                            <span v-if="item.sifat == 0">Kabupaten / Kota</span>
+                                            <span v-else-if="item.sifat == 1">Provinsi</span>
+                                            <span v-else-if="item.sifat == 2">Final</span>
+                                        </td>
+                                        <td>
+                                            <span v-if="item.user_storage.length > 0">
+                                                {{ item.user_storage.length }}
+                                            </span>
+                                            <span v-else>
+                                                Belum Ada Agent
+                                            </span>
+                                        </td>
+                                        <td>
                                         
-                                        
-                                    </td>
-                                    <td>
-                                    {{ Number(item.persentaseall.toFixed(0)) }}%
-                                        
+                                            <span v-if="item.pesksumsudah != null">
+                                                {{ item.pesksumsudah }}
+                                            </span>
 
-                                    </td>
-                                </tr>
-                            
-                            </tbody>
-                        </table>
-                    </div>
+                                            <span v-else>
+                                                Barang Kosong
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span v-if="item.alkessumsudah != null">
+                                                {{ item.alkessumsudah }}
+                                            </span>
+
+                                            <span v-else>
+                                                Barang Kosong
+                                            </span>
+                                            
+                                            
+                                        </td>
+                                        <td>
+                                        {{ Number(item.persentaseall.toFixed(0)) }}%
+                                            
+
+                                        </td>
+                                    </tr>
+                                
+                                </tbody>
+                            </table>
+                        </div>
+                    </b-card>
                    
 
 
@@ -417,15 +426,12 @@
             </div>
         </div>
 
-         <v-skeleton-loader
+         <!-- <v-skeleton-loader
           v-show="elementVisible"
           v-bind="attrs"
           type="card-avatar, article, actions"
-        ></v-skeleton-loader>
+        ></v-skeleton-loader> -->
       </md-app-content>
-
-     
-        
     </md-app>
   </div>
 
@@ -467,7 +473,7 @@ import DashboardService from '@/services/Dashboard/DashboardService'
 import LineChart from "@/components/data/Line"
 import DoughnutChart from "@/components/data/Doughnut"
 import BarChart from "@/components/data/Bar"
-
+import '@/style/css/main.css'
 
 export default {
   name: 'dashboard',
@@ -483,6 +489,7 @@ export default {
 
 
   data: () => ({
+       isNinja: false,
         menuVisible                 : false,
         elementVisible              : true,
 
@@ -838,7 +845,7 @@ export default {
   },
 
   created(){
-    setTimeout(() => this.elementVisible = false, 3000);
+    // setTimeout(() => this.elementVisible = false, 3000);
 
     this.getDashboard();   
         

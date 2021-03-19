@@ -1,0 +1,233 @@
+:root {
+  --f-default: "Roboto", sans-serif;
+  --f-title: "Whyte", serif;
+  --c-white: #fff;
+  --c-grey_15: #e1e1e1;
+  --c-main-text: #251606;
+  --c-text-primary: #333;
+  --c-text-secondary: #777;
+  --c-text-third: #999;
+  --c-cyan: #1cbbcc;
+  --c-cyan_14: #D1F3FB;
+  --c-purple: #4731ce;
+  --c-purple_12: #201f52;
+  --c-purple_14: #f1dfff;
+  --easing: cubic-bezier(.48,0,.12,1);
+  --gradient: linear-gradient( 135deg, rgb(230, 101, 3) 0%, rgb(255, 176, 92) 100%);
+  --box-shadow: 0 5px 15px rgba(39, 52, 100, 0.1);
+  --box-shadow_2: 0 10px 25px rgba(39, 52, 100, 0.1);
+}
+
+.custom .md-theme-default :not(input):not(textarea)::selection {
+  background-color: var(--c-purple);
+}
+.custom .text-data {
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: 1.8rem;
+}
+.custom .text-data.purple {
+  color: var(--c-purple);
+}
+.custom .bg-primary.purple {
+  background-color: var(--c-purple) !important;
+}
+.custom .btn {
+  position: relative;
+  padding: 12px 20px;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 0.78em;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  box-shadow: 0 6px 30px -10px rgba(119, 101, 95, 0.4);
+  overflow: hidden;
+}
+.custom .btn.purple {
+  background-color: var(--c-purple);
+}
+.custom .btn.white {
+  color: var(--c-purple);
+  background-color: var(--c-white);
+}
+.custom .btn.white .md-icon {
+  color: var(--c-purple);
+}
+.custom .btn .md-icon {
+  width: auto;
+  height: auto;
+  min-width: 0;
+  font-size: 16px !important;
+  margin-left: 5px;
+  font-weight: normal;
+}
+.custom .md-app.md-overlap .md-app-toolbar {
+  position: relative;
+  background-color: var(--c-purple_12);
+  height: auto !important;
+  padding: 3em 0 0;
+}
+.custom .md-app .md-app-toolbar {
+  position: relative;
+}
+.custom .md-app .md-app-toolbar .md-toolbar-row .md-title {
+  font-weight: 700;
+  font-size: 2.5em;
+  line-height: normal;
+}
+.custom .md-app .md-app-toolbar .md-toolbar-row h5 {
+  font-weight: 700;
+  font-size: 0.87em;
+  color: #fff;
+  margin-top: 15px;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+.custom .md-app .md-app-scroller {
+  position: relative;
+  margin-top: 0 !important;
+  background-color: #eff1f5;
+}
+.custom .md-app .md-app-scroller:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 140px;
+  background-color: var(--c-purple_12);
+  top: 0;
+  left: 0;
+}
+.custom .md-app .md-app-scroller .md-app-content {
+  margin: 0 !important;
+  background: transparent;
+}
+.custom .md-app .md-app-scroller .md-app-content .card {
+  background-color: white;
+  border: none;
+  box-shadow: var(--box-shadow);
+  border-radius: 15px;
+  padding: 0 15px;
+}
+.custom .md-app .md-app-scroller .md-app-content .card.card-tabel {
+  padding: 0;
+}
+.custom .md-app .md-app-scroller .md-app-content .card.card-tabel > * {
+  padding: 0;
+}
+.custom .md-app .md-app-scroller .md-app-content .card.card-tabel .title-heading {
+  padding: 1.25rem calc(1.25rem + 15px) 0;
+}
+.custom .md-app .md-app-scroller .md-app-content .card.card-tabel .table td, .custom .md-app .md-app-scroller .md-app-content .card.card-tabel .table th {
+  border-top: 1px solid #e0dce4;
+}
+.custom .md-app .md-app-scroller .md-app-content .card.card-tabel .table-hover tbody tr:hover {
+  background-color: var(--c-purple_14);
+}
+.custom .md-app .md-app-scroller .md-app-content #card-persen {
+  transition: 0.3s var(--easing);
+}
+.custom .md-app .md-app-scroller .md-app-content #card-persen:hover {
+  background-color: white;
+  box-shadow: var(--box-shadow_2);
+}
+.custom .md-app .md-app-scroller .md-app-content #card-persen .title-card-persen {
+  font-weight: 700;
+  color: var(--c-purple);
+  margin-bottom: 10px;
+}
+.custom .md-app .md-app-scroller .md-app-content #card-persen .mount-card-persen {
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: 1.5rem;
+}
+.custom .md-app .md-app-scroller .md-app-content #card-persen .md-progress-bar {
+  background-color: var(--c-cyan_14);
+  height: 8px;
+  border-radius: 4px;
+}
+.custom .md-app .md-app-scroller .md-app-content #card-persen .md-progress-bar .md-progress-bar-fill {
+  background-color: var(--c-cyan);
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter {
+  position: relative;
+  padding: 25px 35px;
+  margin: 30px 0 30px;
+  border: 2px solid #dcdbe4;
+  border-radius: 15px;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter h6 {
+  font-weight: 500;
+  color: var(--c-purple);
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .custom-control {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .custom-control .custom-control-label::before {
+  top: 0;
+  background-color: transparent;
+  border-color: #d1cfdb;
+  border-width: 2px;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .custom-control .custom-control-label::after {
+  top: 0;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .custom-control .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: var(--c-purple);
+  border-color: var(--c-purple);
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter.pending .vue-js-switch .v-switch-core .v-switch-button {
+  background-color: #fcc938;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter.pending .vue-js-switch.toggled .v-switch-core {
+  background-color: #fcc938 !important;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter.on-going .vue-js-switch .v-switch-core .v-switch-button {
+  background-color: #00b0ff;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter.on-going .vue-js-switch.toggled .v-switch-core {
+  background-color: #00b0ff !important;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter.success .vue-js-switch .v-switch-core .v-switch-button {
+  background-color: #00C853;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter.success .vue-js-switch.toggled .v-switch-core {
+  background-color: #00C853 !important;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter .vue-js-switch {
+  margin-bottom: 0;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter .vue-js-switch .v-switch-core {
+  background-color: #d5d3df !important;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter .vue-js-switch .v-switch-core .v-switch-button {
+  transition: all 0.3s !important;
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter .vue-js-switch.toggled .v-switch-core .v-switch-button {
+  background-color: var(--c-white);
+}
+.custom .md-app .md-app-scroller .md-app-content .box-filter .item-filter .item-shipping-filter > span {
+  margin-left: 10px;
+}
+.custom .md-app .md-app-scroller .md-app-content .vue-map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+/*# sourceMappingURL=main.css.map */
