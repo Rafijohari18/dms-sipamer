@@ -17,6 +17,10 @@ class DashboardService{
     filterdata(data){
         return http.post('/dashboard/filter/data',data);
     }
+    filter_storage(data){
+        return http.post('/dashboard/filter_storage',data);
+    }
+    
 
     
 }

@@ -410,6 +410,10 @@
                     <b-card class="card-tabel">
                         <div class="title-heading mb-4">
                             <h5>Kuantitas Merkuri Terlapor</h5>
+
+                            <p>Cari Berdasarkan Nama Storage</p>
+                            <input type="text" class="form-control"  v-on:keyup="filter_storage" 
+                            v-model="nama_storage">
                         </div>
                         <div class="table-responsive">
                             <table class="table table-hover ">
@@ -589,6 +593,8 @@ export default {
         dental_amalgam_baik         : '',
         pesk_baik                   : '',
         pesk_buruk                  : '',
+        nama_storage                : '',
+
 
 
 
@@ -1045,6 +1051,21 @@ export default {
         });
 
 
+    },
+
+     filter_storage: function () {
+      let formData = {
+        nama_storage: this.nama_storage,
+      };
+
+      DashboardService.filter_storage(formData)
+        .then((response) => {
+            this.storage      = response.data.data;
+        })
+
+        .catch((e) => {
+          console.log(e);
+        });
     },
     
 
