@@ -14,6 +14,9 @@ class DashboardService{
     sortirStatus(data){
         return http.post('/dashboard/sortir/status/all',data);
     }
+    filterdata(data){
+        return http.post('/dashboard/filter/data',data);
+    }
 
     
 }
