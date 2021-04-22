@@ -50,6 +50,20 @@
 
                             <div class="row align-items-center mt-2">
                                 
+                                <div class="col-md-5">
+                                    <span class="text-muted">Terlapor</span>
+                                </div>
+
+                                <div class="col-md-7">
+                                     <h5 class="text-right mt-3">
+                                        {{ total_pesk_shipping }}  KG
+                                    </h5>
+                                </div>
+
+                            </div>
+
+                            <div class="row align-items-center">
+                                
                                 <div class="col-md-6">
                                     <span class="text-muted">Terkumpul</span>
                                 </div>
@@ -93,8 +107,23 @@
                             
                             <md-progress-bar md-mode="determinate" v-if="jumlahThermometer.length > 0" :md-value="Number(( sumalkes(jumlahThermometer) / wadahThermometer ) * 100).toFixed(2)"></md-progress-bar>
                             <md-progress-bar md-mode="determinate" v-else :md-value="0"></md-progress-bar>
-
+                            
                             <div class="row align-items-center mt-2">
+                                
+                                <div class="col-md-5">
+                                    <span class="text-muted">Terlapor</span>
+                                </div>
+
+                                <div class="col-md-7">
+                                     <h5 class="text-right mt-3">
+                                        {{ total_termometer_shipping }}  PCS
+                                    </h5>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row align-items-center">
                                 
                                 <div class="col-md-6">
                                     <span class="text-muted">Terkumpul</span>
@@ -144,6 +173,21 @@
 
                             <div class="row align-items-center mt-2">
                                 
+                                <div class="col-md-5">
+                                    <span class="text-muted">Terlapor</span>
+                                </div>
+
+                                <div class="col-md-7">
+                                     <h5 class="text-right mt-3">
+                                        {{ total_tensimeter_shipping }}  PCS
+                                    </h5>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row align-items-center">
+                                
                                 <div class="col-md-6">
                                     <span class="text-muted">Terkumpul</span>
                                 </div>
@@ -188,6 +232,20 @@
                             <md-progress-bar v-else md-mode="determinate" :md-value="0"></md-progress-bar>
 
                             <div class="row align-items-center mt-2">
+                                
+                                <div class="col-md-5">
+                                    <span class="text-muted">Terlapor</span>
+                                </div>
+
+                                <div class="col-md-7">
+                                     <h5 class="text-right mt-3">
+                                        {{ total_amalgam_shipping }}  PCS
+                                    </h5>
+                                </div>
+
+                            </div>
+
+                            <div class="row align-items-center">
                                 
                                 <div class="col-md-6">
                                     <span class="text-muted">Terkumpul</span>
@@ -594,9 +652,10 @@ export default {
         pesk_baik                   : '',
         pesk_buruk                  : '',
         nama_storage                : '',
-
-
-
+        total_pesk_shipping         : '',
+        total_termometer_shipping   : '',
+        total_tensimeter_shipping   : '',
+        total_amalgam_shipping      : '',
 
         //grafik
         chartdata                   : [],
@@ -792,6 +851,10 @@ export default {
               this.dental_amalgam_baik          = response.data.dental_amalgam_baik;
               this.pesk_baik                    = response.data.pesk_baik;
               this.pesk_buruk                   = response.data.pesk_buruk;
+              this.total_pesk_shipping          = response.data.total_pesk_shipping;
+              this.total_termometer_shipping    = response.data.total_termometer_shipping;
+              this.total_tensimeter_shipping    = response.data.total_tensimeter_shipping;
+              this.total_amalgam_shipping       = response.data.total_amalgam_shipping;
             
 
               this.alkesborangdata();
