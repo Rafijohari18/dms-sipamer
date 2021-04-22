@@ -329,6 +329,7 @@
                                         <div class="col-md-4">
                                             <div class="item-legend">
                                                 <span class="color-legend pending">
+                                                    
                                                 </span>
                                                 <span class="desc-legend">
                                                     Pending
@@ -395,17 +396,57 @@
                             <div class="col-md-12">
                                 <div class="list-legend">
                                     <h6>Legend Icon</h6>
-                                    <div class="row">
-                                        <div class="col-md-4">
+                                    <div class="row justify-content-between">
+                                        <div class="col-md-2">
                                             <div class="item-legend">
-                                                <span class="color-legend kabupaten">
+                                                <span class="icon-legend">
+                                                    <img src="@/assets/images/pin/pesk/icon-pesk.svg" alt="">
                                                 </span>
                                                 <span class="desc-legend">
-                                                    Kabupaten
+                                                    PESK
                                                 </span>
                                             </div>
                                         </div>
-                                        
+                                        <div class="col-md-2">
+                                            <div class="item-legend">
+                                                <span class="icon-legend">
+                                                    <img src="@/assets/images/pin/Thermo/icon-thermo.svg" alt="">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Thermometer
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="item-legend">
+                                                <span class="icon-legend">
+                                                    <img src="@/assets/images/pin/tensi/icon-tensi.svg" alt="">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Tensimeter
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="item-legend">
+                                                <span class="icon-legend">
+                                                    <img src="@/assets/images/pin/dental/icon-dental.svg" alt="">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Dental
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="item-legend">
+                                                <span class="icon-legend">
+                                                    <img src="@/assets/images/pin/storage/icon-storage.svg" alt="">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Storage
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
                                     
                                 </div>

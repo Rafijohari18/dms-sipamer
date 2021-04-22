@@ -297,6 +297,16 @@
 .custom .list-legend .item-legend .color-legend.final::after {
   border-top: 7px solid #f46060;
 }
+.custom .list-legend .item-legend .icon-legend {
+  position: relative;
+  display: flex;
+  width: 25px;
+  height: 25px;
+}
+.custom .list-legend .item-legend .icon-legend img {
+  width: 100%;
+  height: auto;
+}
 .custom .list-legend .item-legend .desc-legend {
   position: relative;
   margin-left: 10px;

@@ -427,6 +427,18 @@
                 
             }
 
+            .icon-legend {
+                position: relative;
+                display: flex;
+                width: 25px;
+                height: 25px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
             .desc-legend {
                 position: relative;
                 margin-left: 10px;
