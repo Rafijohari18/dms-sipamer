@@ -461,6 +461,7 @@
                 <div class="title-heading text-center mb-4">
                   <h5>Gudang/Storage</h5>
                 </div>
+<<<<<<< HEAD
                 <div class="row">
                   <div class="col-md-4 text-center">
                     <h2 class="text-data purple">{{ storage_kabupaten }}</h2>
@@ -474,6 +475,167 @@
                     <h2 class="text-data purple">{{ storage_final }}</h2>
                     <span class="text-muted">Final</span>
                   </div>
+=======
+                <div class="col-md-12">
+                    <div class="box-filter">
+                        <div class="title-heading">
+                            <h5>Legend</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="list-legend">
+                                    <h6>Legend Warna</h6>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend pending">
+                                                    
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Pending
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend on-going">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    On Going
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend success">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Sukses
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="list-legend">
+                                    <h6>Legend Warna Storage</h6>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend kabupaten">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Kabupaten
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend provinsi">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Provinsi
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend final">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Final
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="list-legend">
+                                    <h6>Legend Icon</h6>
+                                    <div class="row justify-content-between">
+                                        <div class="col-md-2">
+                                            <div class="item-legend">
+                                                <span class="icon-legend">
+                                                    <img src="@/assets/images/pin/pesk/icon-pesk.svg" alt="">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    PESK
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="item-legend">
+                                                <span class="icon-legend">
+                                                    <img src="@/assets/images/pin/Thermo/icon-thermo.svg" alt="">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Thermometer
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="item-legend">
+                                                <span class="icon-legend">
+                                                    <img src="@/assets/images/pin/tensi/icon-tensi.svg" alt="">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Tensimeter
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="item-legend">
+                                                <span class="icon-legend">
+                                                    <img src="@/assets/images/pin/dental/icon-dental.svg" alt="">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Dental
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="item-legend">
+                                                <span class="icon-legend">
+                                                    <img src="@/assets/images/pin/storage/icon-storage.svg" alt="">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Storage
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <b-card class="mb-4">
+                        <div class="title-heading text-center mb-4">
+                            <h5>Gudang/Storage</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <h2 class="text-data purple">{{ storage_kabupaten }}</h2>
+                                <span class="text-muted">Kabupaten / Kota</span>
+                                
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <h2 class="text-data purple">{{ storage_provinsi }}</h2>
+                                <span class="text-muted">Provinsi</span>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <h2 class="text-data purple">{{ storage_final }}</h2>
+                                <span class="text-muted">Final</span>
+                            </div>
+                        </div>
+                    </b-card>
+>>>>>>> 9a83a02ba1a263764bc5951f37429c7ef5a1c613
                 </div>
               </b-card>
             </div>
