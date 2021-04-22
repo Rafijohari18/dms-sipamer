@@ -339,7 +339,113 @@
         }
     }
 
+    .list-legend {
 
+        h6 {
+            font-weight: 500;
+            color: var(--c-purple);
+            margin-bottom: 20px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .item-legend {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 0 0 10px 10px;
+
+            .color-legend {
+                position: relative;
+                width: 16px;
+                height: 16px;
+                border-radius: 100%;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    height: 15px;
+                    
+                    border-right: 3px solid transparent;
+                    border-bottom: 7px solid transparent;
+                    border-left: 3px solid transparent;
+                    top: 90%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    width: 5px;
+                }
+
+                &.pending {
+                    background-color: #fcc938;
+                    
+                    &::after {
+                        border-top: 7px solid #fcc938;
+                    }
+                }
+
+                &.on-going {
+                    background-color: #00b0ff;
+
+                    &::after {
+                        border-top: 7px solid #00b0ff;
+                    }
+                }
+
+                &.success {
+                    background-color: #00c853;
+
+                    &::after {
+                        border-top: 7px solid #00c853;
+                    }
+                }
+
+                &.kabupaten {
+                    background-color: #c9590d;
+
+                    &::after {
+                        border-top: 7px solid #c9590d;
+                    }
+                }
+
+                &.provinsi {
+                    background-color: #b55ae5;
+
+                    &::after {
+                        border-top: 7px solid #b55ae5;
+                    }
+                }
+
+                &.final {
+                    background-color: #f46060;
+
+                    &::after {
+                        border-top: 7px solid #f46060;
+                    }
+                }
+
+                
+            }
+
+            .icon-legend {
+                position: relative;
+                display: flex;
+                width: 25px;
+                height: 25px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .desc-legend {
+                position: relative;
+                margin-left: 10px;
+                width: calc(100% - 26px);
+            }
+        }
+    }
     
    
 }
