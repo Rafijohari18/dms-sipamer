@@ -259,6 +259,7 @@
                         <small class="text-muted">*Sortir Status Shipping untuk mengetahui Kondisi terbaru penjemputan</small>
                     </div>
                 </div>
+                
 
             </div>
             <div class="row">
@@ -273,7 +274,103 @@
                         </div>
                     </gmap-map>
                 </div>
-
+                <div class="col-md-12">
+                    <div class="box-filter">
+                        <div class="title-heading">
+                            <h5>Legend</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="list-legend">
+                                    <h6>Legend Warna</h6>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend pending">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Pending
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend on-going">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    On Going
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend success">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Sukses
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="list-legend">
+                                    <h6>Legend Warna Storage</h6>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend kabupaten">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Kabupaten
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend provinsi">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Provinsi
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend final">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Final
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="list-legend">
+                                    <h6>Legend Icon</h6>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="item-legend">
+                                                <span class="color-legend kabupaten">
+                                                </span>
+                                                <span class="desc-legend">
+                                                    Kabupaten
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     <b-card class="mb-4">
                         <div class="title-heading text-center mb-4">

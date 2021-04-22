@@ -229,5 +229,78 @@
   overflow: hidden;
   box-shadow: var(--box-shadow);
 }
+.custom .list-legend h6 {
+  font-weight: 500;
+  color: var(--c-purple);
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.custom .list-legend .item-legend {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 10px;
+}
+.custom .list-legend .item-legend .color-legend {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+}
+.custom .list-legend .item-legend .color-legend::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 15px;
+  border-right: 3px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 3px solid transparent;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 5px;
+}
+.custom .list-legend .item-legend .color-legend.pending {
+  background-color: #fcc938;
+}
+.custom .list-legend .item-legend .color-legend.pending::after {
+  border-top: 7px solid #fcc938;
+}
+.custom .list-legend .item-legend .color-legend.on-going {
+  background-color: #00b0ff;
+}
+.custom .list-legend .item-legend .color-legend.on-going::after {
+  border-top: 7px solid #00b0ff;
+}
+.custom .list-legend .item-legend .color-legend.success {
+  background-color: #00c853;
+}
+.custom .list-legend .item-legend .color-legend.success::after {
+  border-top: 7px solid #00c853;
+}
+.custom .list-legend .item-legend .color-legend.kabupaten {
+  background-color: #c9590d;
+}
+.custom .list-legend .item-legend .color-legend.kabupaten::after {
+  border-top: 7px solid #c9590d;
+}
+.custom .list-legend .item-legend .color-legend.provinsi {
+  background-color: #b55ae5;
+}
+.custom .list-legend .item-legend .color-legend.provinsi::after {
+  border-top: 7px solid #b55ae5;
+}
+.custom .list-legend .item-legend .color-legend.final {
+  background-color: #f46060;
+}
+.custom .list-legend .item-legend .color-legend.final::after {
+  border-top: 7px solid #f46060;
+}
+.custom .list-legend .item-legend .desc-legend {
+  position: relative;
+  margin-left: 10px;
+  width: calc(100% - 26px);
+}
 
 /*# sourceMappingURL=main.css.map */
